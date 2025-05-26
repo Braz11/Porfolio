@@ -6,10 +6,10 @@ $receiving_email_address = 'rodrigobraz.dev@gmail.com';
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
   
   // Get the form fields and remove whitespace
-  $name    = trim($_POST["name"]);
-  $email   = trim($_POST["email"]);
-  $subject = trim($_POST["subject"]);
-  $message = trim($_POST["message"]);
+  $name    = trim($_POST["name-field"]);
+  $email   = trim($_POST["email-field"]);
+  $subject = trim($_POST["subject-field"]);
+  $message = trim($_POST["message-field"]);
 
   // Basic validation (you can improve this)
   if (!empty($name) && !empty($email) && !empty($subject) && !empty($message) && filter_var($email, FILTER_VALIDATE_EMAIL)) {
